@@ -51,3 +51,21 @@ sizeof_impl!(
     Saturating<u8>, Saturating<u16>, Saturating<u32>, Saturating<u64>, Saturating<u128>, Saturating<usize>,
     Saturating<i8>, Saturating<i16>, Saturating<i32>, Saturating<i64>, Saturating<i128>, Saturating<isize>
 );
+
+impl TypeSize for core::net::Ipv6Addr {
+    fn extra_size(&self) -> usize {
+        0
+    }
+}
+
+impl TypeSize for core::net::Ipv4Addr {
+    fn extra_size(&self) -> usize {
+        0
+    }
+}
+
+impl TypeSize for core::net::IpAddr {
+    fn extra_size(&self) -> usize {
+        0
+    }
+}
