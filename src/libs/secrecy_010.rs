@@ -1,8 +1,8 @@
-use secrecy::{zeroize::Zeroize, ExposeSecret};
+use secrecy_010::{zeroize::Zeroize, ExposeSecret};
 
 use crate::{if_typesize_details, TypeSize};
 
-impl<T: Zeroize + TypeSize> TypeSize for secrecy::Secret<T> {
+impl<T: Zeroize + TypeSize> TypeSize for secrecy_010::SecretBox<T> {
     fn extra_size(&self) -> usize {
         self.expose_secret().extra_size()
     }

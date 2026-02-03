@@ -20,8 +20,10 @@ mod mini_moka;
 mod nonmax;
 #[cfg(feature = "parking_lot")]
 mod parking_lot;
-#[cfg(feature = "secrecy")]
-mod secrecy;
+#[cfg(feature = "secrecy_010")]
+mod secrecy_010;
+#[cfg(feature = "secrecy_08")]
+mod secrecy_08;
 #[cfg(feature = "serde_json")]
 mod serde_json;
 #[cfg(feature = "simd_json")]
