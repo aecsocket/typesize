@@ -20,6 +20,8 @@ mod mini_moka;
 mod nonmax;
 #[cfg(feature = "parking_lot")]
 mod parking_lot;
+#[cfg(feature = "rust_decimal_1")]
+mod rust_decimal_1;
 #[cfg(feature = "secrecy_010")]
 mod secrecy_010;
 #[cfg(feature = "secrecy_08")]
@@ -32,5 +34,7 @@ mod simd_json;
 mod time;
 #[cfg(feature = "url")]
 mod url;
+#[cfg(feature = "uuid_1")]
+mod uuid_1;
 #[cfg(feature = "web-time")]
 mod web_time;

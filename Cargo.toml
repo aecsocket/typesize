@@ -37,6 +37,8 @@ bitvec = { version = "1.0.1", default-features = false, features = [
 ], optional = true }
 web-time = { version = "1.1.0", optional = true }
 typesize-derive = { version = "=0.1.11", path = "typesize-derive" }
+uuid_1 = { version = "1.20.0", optional = true, package = "uuid" }
+rust_decimal_1 = { version = "1.40.0", optional = true, package = "rust_decimal" }
 
 [features]
 default = ["std"]
@@ -56,6 +58,7 @@ serde_json = ["dep:serde_json"]
 mini_moka = ["dep:mini-moka"]
 hashbrown = ["dep:hashbrown_14"]
 hashbrown_15 = ["dep:hashbrown_15"]
+uuid_1 = ["dep:uuid_1"]
 secrecy_08 = ["dep:secrecy_08"]
 secrecy_010 = ["dep:secrecy_010"]
 chrono = ["dep:chrono"]
@@ -64,6 +67,7 @@ time = ["dep:time"]
 url = ["dep:url"]
 bitvec = ["dep:bitvec"]
 web-time = ["dep:web-time"]
+rust_decimal_1 = ["dep:rust_decimal_1"]
 
 [package.metadata.docs.rs]
 all-features = true

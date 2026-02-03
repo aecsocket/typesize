@@ -17,3 +17,15 @@ impl<T: Zeroize + TypeSize> TypeSize for secrecy_010::SecretBox<T> {
         }
     }
 }
+
+impl TypeSize for secrecy_010::SecretString {
+    fn extra_size(&self) -> usize {
+        self.expose_secret().len()
+    }
+
+    if_typesize_details! {
+        fn get_collection_item_count(&self) -> Option<usize> {
+            Some(self.expose_secret().len())
+        }
+    }
+}
